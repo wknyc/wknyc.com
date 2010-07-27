@@ -56,6 +56,10 @@ h2 {
 	padding-bottom:15px;
 }
 
+.row {
+	clear:both;
+}
+
 .left {
 	float:left;
 }
@@ -89,6 +93,46 @@ h2 {
 	height:393px;
 	background:url(../img/icon_city.gif) no-repeat;
 }
+
+.follow {
+	width:350px;
+	height:360px;
+	overflow:hidden;
+	padding-right:50px;
+}
+
+.follow h2 {
+	width:239px;
+	height:51px;
+	background:url(../img/hd_follow.gif) no-repeat;
+}
+
+.follow p.first {
+	font-size:22px;
+}
+
+.follow p {
+	font-family:Helvetica Neue;
+	font-size:15px;
+	color:#000;
+	padding-bottom:15px;
+	border-bottom:1px solid #e5e5e5;
+}
+
+.clients {
+	width:350px;
+	height:360px;
+	overflow:hidden;
+	padding-right:50px;
+	padding-top:21px;
+}
+
+.clients h2 {
+	width:476px;
+	height:393px;
+	background:url(../img/hd_clients.gif) no-repeat;
+}
+
 
 /*letter styles*/
 #w {width:202px;}

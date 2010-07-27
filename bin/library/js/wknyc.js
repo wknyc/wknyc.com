@@ -3,24 +3,12 @@
  */
 //Main namespace
 var wknyc = {
-	nav: {},
+	feeds: {},
 	utils: {},
 	globals: {},
-	gui: {},
 	twitter: "http://api.twitter.com/1/statuses/user_timeline.json?id=16405865",
 	facebook: "http://www.facebook.com/feeds/status.php?id=717091609&viewer=717091609&key=b827c1adc5&format=rss20"
 };
-
-//Functions
-wknyc.loadLetters = function() {
-	wknyc.utils.log(letters.w[Math.ceil(Math.random()*letters.w.length)-1].src);
-	$('#w').html('<img src="library/img/w/'+letters.w[Math.ceil(Math.random()*letters.w.length)-1].src+'" alt="'+letters.w[Math.ceil(Math.random()*letters.w.length)-1].alt+'"');
-	$('#plus').html('<img src="library/img/plus/'+letters.plus[Math.ceil(Math.random()*letters.plus.length)-1].src+'" alt="'+letters.plus[Math.ceil(Math.random()*letters.plus.length)-1].alt+'"');
-	$('#k').html('<img src="library/img/k/'+letters.k[Math.ceil(Math.random()*letters.k.length)-1].src+'" alt="'+letters.k[Math.ceil(Math.random()*letters.k.length)-1].alt+'"');
-	$('#n').html('<img src="library/img/n/'+letters.n[Math.ceil(Math.random()*letters.n.length)-1].src+'" alt="'+letters.n[Math.ceil(Math.random()*letters.n.length)-1].alt+'"');
-	$('#y').html('<img src="library/img/y/'+letters.y[Math.ceil(Math.random()*letters.y.length)-1].src+'" alt="'+letters.y[Math.ceil(Math.random()*letters.y.length)-1].alt+'"');
-	$('#c').html('<img src="library/img/c/'+letters.c[Math.ceil(Math.random()*letters.c.length)-1].src+'" alt="'+letters.c[Math.ceil(Math.random()*letters.c.length)-1].alt+'"');
-}
 
 //Utilities
 wknyc.utils.renderFonts = function() {
@@ -108,12 +96,13 @@ function spinner(holderid, R1, R2, count, stroke_width, colour) {
 /////////////////////////////////////////////////////////////////////////////////////////
 function init() {
 	wknyc.utils.renderFonts();
-	//wknyc.loadLetters();
+	getFeed(wknyc.facebook);
+	getBlog();
 	setTimeout(
 		function(){
 			$('#logo').fadeIn(400);
 		},
-	500);
+	250);
 }
 
 $(document).ready(function(){
